@@ -1,9 +1,21 @@
+:root {
+  --heading-font: "Avenir Next LT Pro";
+  --content-font: "Avenir Next LT Pro";
+  --font-size: 16px;
+  --text-color: black;
+  --content-width: 1024px;
+  --extra-width: calc(100% - 48px);
+  --accent-color: #38ffd7;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--content-font);
+  font-size: var(--font-size);
+  color: var(--text-color);
+  line-height: 1.5em;
 }
 
 a {
@@ -13,4 +25,59 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: block;
+  margin-top: 0;
+  margin-bottom: .8em;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+
+.site-header {
+  border-bottom: solid 1px #eee;
+}
+
+.site-header--sticky {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 99;
+}
+
+.site-footer {
+  background: black;
+  padding: 30px 0;
+}
+
+.site-main {
+  min-height: 80vh;
+}
+
+.site-container {
+  width: var(--content-width);
+  max-width: calc(100% - 46px);
+  margin: 0 auto;
+}
+
+.content-container {
+  width: var(--content-width);
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+.ss-title {
+  width: 400px;
+  max-width: 100%;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.__has-spacing {
+  padding: 4em 0;
+}
+
+.single-post-template {
+  background-color: #f9f9f9;
 }
